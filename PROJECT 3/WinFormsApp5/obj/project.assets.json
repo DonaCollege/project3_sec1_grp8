@@ -8,19 +8,19 @@
     "net8.0-windows8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\barot\\.nuget\\packages\\": {}
+    "C:\\Users\\konda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
+      "projectUniqueName": "C:\\Users\\konda\\Source\\Repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
       "projectName": "WinFormsApp5",
-      "projectPath": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
-      "packagesPath": "C:\\Users\\barot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\obj\\",
+      "projectPath": "C:\\Users\\konda\\Source\\Repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
+      "packagesPath": "C:\\Users\\konda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\konda\\Source\\Repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\barot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\konda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -61,15 +56,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
