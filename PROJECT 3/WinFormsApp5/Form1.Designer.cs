@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -37,6 +26,7 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            txtStatus = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -60,7 +50,7 @@
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(94, 83);
+            button2.Location = new Point(101, 83);
             button2.Name = "button2";
             button2.Size = new Size(182, 148);
             button2.TabIndex = 1;
@@ -97,6 +87,7 @@
             button4.Text = "NOTIFICATION ";
             button4.TextAlign = ContentAlignment.TopCenter;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -111,6 +102,7 @@
             button5.Text = "CAMERAS";
             button5.TextAlign = ContentAlignment.BottomCenter;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -125,6 +117,7 @@
             button6.Text = "MOTIONSENSOR";
             button6.TextAlign = ContentAlignment.BottomCenter;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -132,13 +125,14 @@
             button7.BackgroundImageLayout = ImageLayout.Stretch;
             button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = SystemColors.ActiveCaptionText;
-            button7.Location = new Point(227, 311);
+            button7.Location = new Point(217, 300);
             button7.Name = "button7";
             button7.Size = new Size(182, 148);
             button7.TabIndex = 4;
             button7.Text = "TEMPERATORSENSOR";
             button7.TextAlign = ContentAlignment.TopCenter;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -154,13 +148,23 @@
             button8.TextAlign = ContentAlignment.TopCenter;
             button8.UseVisualStyleBackColor = true;
             // 
+            // txtStatus
+            // 
+            txtStatus.Location = new Point(101, 500);
+            txtStatus.Multiline = true;
+            txtStatus.Name = "txtStatus";
+            txtStatus.ReadOnly = true;
+            txtStatus.Size = new Size(972, 150);
+            txtStatus.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.main_BG;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1161, 534);
+            ClientSize = new Size(1161, 700);
+            Controls.Add(txtStatus);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button5);
@@ -173,6 +177,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -185,5 +190,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private TextBox txtStatus;
     }
 }
