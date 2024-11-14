@@ -10,11 +10,14 @@ namespace WinFormsApp5
         private bool isOn;
         private bool energySavingMode;
         private string dataFilePath;
+        private string roomName;  // New attribute to identify the room
+
 
         // Properties for retrieving current states
         public int BrightnessLevel => brightnessLevel;
         public bool IsOn => isOn;
         public bool EnergySavingMode => energySavingMode;
+        public string RoomName => roomName;  // Property for room name
 
         // Constructors
         public LightControl()
@@ -30,7 +33,22 @@ namespace WinFormsApp5
             dataFilePath = filename;
             LoadSettingsFromFile();
         }
+        // Constructors for room light control setting 
+        public LightControl(string roomName)
+        {
+            // Initialize room-specific settings
+            this.roomName = roomName;
+            brightnessLevel = 100;
+            isOn = false;
+            energySavingMode = false;
+        }
 
+        public LightControl(string roomName, string filename)
+        {
+            this.roomName = roomName;
+            dataFilePath = filename;
+            LoadSettingsFromFile();
+        }
         // Method to turn the light on
         public void TurnOn()
         {
@@ -129,9 +147,9 @@ namespace WinFormsApp5
                     SetDefaultSettings();
                 }
             }
-            else
+             else
             {
-                Console.WriteLine("Configuration file not found. Using default settings.");
+                Console.WriteLine("Configuration file for room {0} not found. Using default settings.", roomName);
                 SetDefaultSettings();
             }
         }
