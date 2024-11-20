@@ -56,7 +56,7 @@ namespace WinFormsApp5
         private void button4_Click(object sender, EventArgs e)
         {
             // Open the NotificationForm to display alert history
-            NotificationForm notificationForm = new NotificationForm(notificationSystem);
+            NotificationForm notificationForm = new NotificationForm();
             notificationForm.ShowDialog();
         }
 
@@ -87,6 +87,26 @@ namespace WinFormsApp5
             string result = scadaInterface.ExecuteUserCommand("Turn on lights");
             MessageBox.Show(result);  // Display result in a message box
             DisplayDeviceStatus();    // Update the status display
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

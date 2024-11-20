@@ -35,8 +35,9 @@ namespace WinFormsApp5
         // Sends the alert to the SCADA/HMI Interface for display
         private void SendAlertToHMI(string alertMessage)
         {
-            // This is where the SCADAInterface would handle displaying the alert.
+            // Update the HMI with the alert (UI interaction will be handled in the form)
             Console.WriteLine("Alert sent to HMI: " + alertMessage);
+            // You can further implement an event or method to trigger HMI updates here.
         }
 
         // Logs the alert history
@@ -81,7 +82,7 @@ namespace WinFormsApp5
         // Load alert thresholds from a file
         private void LoadAlertThresholds()
         {
-            // Simulated loading from a file
+            // Simulate loading from a file
             alertThresholds["Temperature"] = 30.0;
             alertThresholds["Motion"] = 1.0;
         }
@@ -94,8 +95,11 @@ namespace WinFormsApp5
 
         private void SaveAlertHistory()
         {
-            // Simulated saving to a file
+            // Simulate saving to a file
             Console.WriteLine("Alert history saved.");
+
         }
+
+       
     }
 }
