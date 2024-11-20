@@ -97,6 +97,7 @@
             button4.Text = "NOTIFICATION ";
             button4.TextAlign = ContentAlignment.TopCenter;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -111,6 +112,7 @@
             button5.Text = "CAMERAS";
             button5.TextAlign = ContentAlignment.BottomCenter;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 

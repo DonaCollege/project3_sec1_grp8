@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj": {}
+    "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj": {
+    "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
+        "projectUniqueName": "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
         "projectName": "WinFormsApp5",
-        "projectPath": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
-        "packagesPath": "C:\\Users\\barot\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\obj\\",
+        "projectPath": "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
+        "packagesPath": "C:\\Users\\dhruv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\WinFormsApp5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\barot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dhruv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

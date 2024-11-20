@@ -14,7 +14,11 @@ namespace WinFormsApp5
     {
         public LightingControlForm()
         {
-            InitializeComponent();
+        }
+
+        private void LightingControlForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

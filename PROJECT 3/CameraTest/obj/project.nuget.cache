@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "rzY997BcoOGyJVygYpx+lA478lcYC1Y6NBusVglipOpM6k+Rm0IVrJvD6EIFaBBIKwtF+YcghXttbQh5Zd5GyA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\dhruv\\source\\repos\\project3_sec1_grp8\\PROJECT 3\\CameraTest\\CameraTest.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project WinFormsApp5 is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project WinFormsApp5 supports: net8.0-windows8.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "WinFormsApp5",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

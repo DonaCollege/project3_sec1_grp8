@@ -29,5 +29,19 @@ namespace WinFormsApp5
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Replace 'LightingControlForm' with another form name if a different form should be opened
+            CameraForm CamForm = new CameraForm();
+            CamForm.ShowDialog(); // Or use Show() if non-modal behavior is desired
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
