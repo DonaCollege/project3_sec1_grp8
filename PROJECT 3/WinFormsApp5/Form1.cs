@@ -19,15 +19,42 @@ namespace WinFormsApp5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // This code assumes that button2 should also open the LightingControlForm
-            // Replace 'LightingControlForm' with another form name if a different form should be opened
-            LightingControlForm lightingForm = new LightingControlForm();
-            lightingForm.ShowDialog(); // Or use Show() if non-modal behavior is desired
+            // Create an instance of the LightModuleForm
+            LightModuleForm lightModuleForm = new LightModuleForm();
+
+            // Show the Light Module form as a modal dialog
+            lightModuleForm.ShowDialog();
+
+            // If you want the form to be non-modal (independent), use lightModuleForm.Show() instead
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Create an instance of the SmartLockForm
+            SmartLockForm smartLockForm = new SmartLockForm();
 
+            // Show the SmartLockForm as a modal dialog
+            smartLockForm.ShowDialog(); // Use Show() if you prefer a non-modal window
+        }
+
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the TemperatureSensorForm
+            TemperatureSensorForm tempSensorForm = new TemperatureSensorForm();
+
+            // Show the Temperature Sensor Form as a modal dialog
+            tempSensorForm.ShowDialog();  // Or use Show() if non-modal behavior is desired
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the MotionSensorForm
+            MotionSensorForm motionSensorForm = new MotionSensorForm();
+
+            // Show the Motion Sensor Form
+            motionSensorForm.ShowDialog(); // Use ShowDialog for a modal form or Show for a non-modal form
         }
     }
 }

@@ -4,7 +4,16 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LightingControlForm.cs">
+    <Compile Update="LightModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MotionSensorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SmartLockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TemperatureSensorForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
