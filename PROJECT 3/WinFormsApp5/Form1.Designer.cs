@@ -125,6 +125,7 @@
             button6.Text = "MOTIONSENSOR";
             button6.TextAlign = ContentAlignment.BottomCenter;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -139,6 +140,7 @@
             button7.Text = "TEMPERATORSENSOR";
             button7.TextAlign = ContentAlignment.TopCenter;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -146,6 +148,7 @@
             button8.BackgroundImageLayout = ImageLayout.Stretch;
             button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button8.ForeColor = SystemColors.ButtonHighlight;
+            button8.ImageAlign = ContentAlignment.TopCenter;
             button8.Location = new Point(755, 311);
             button8.Name = "button8";
             button8.Size = new Size(182, 148);

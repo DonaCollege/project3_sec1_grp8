@@ -19,3 +19,23 @@ C:\Users\parab\source\repos\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\r
 C:\Users\barot\source\repos\SEM 3\Project 3 - sdlc\PROJECT 3\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.dll
 C:\Users\barot\source\repos\SEM 3\Project 3 - sdlc\PROJECT 3\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\refint\WinFormsApp5.dll
 C:\Users\barot\source\repos\SEM 3\Project 3 - sdlc\PROJECT 3\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.pdb
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\bin\Debug\net8.0-windows8.0\WinFormsApp5.exe
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\bin\Debug\net8.0-windows8.0\WinFormsApp5.deps.json
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\bin\Debug\net8.0-windows8.0\WinFormsApp5.runtimeconfig.json
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\bin\Debug\net8.0-windows8.0\WinFormsApp5.dll
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\bin\Debug\net8.0-windows8.0\WinFormsApp5.pdb
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.Form1.resources
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.Properties.Resources.resources
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.TemperatureSensorForm.resources
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.csproj.GenerateResource.cache
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.AssemblyInfoInputs.cache
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.AssemblyInfo.cs
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.csproj.CoreCompileInputs.cache
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.sourcelink.json
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.dll
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\refint\WinFormsApp5.dll
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.pdb
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.genruntimeconfig.cache
+C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\ref\WinFormsApp5.dll
+C:\Users\parab\source\repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.MotionSensorForm.resources
