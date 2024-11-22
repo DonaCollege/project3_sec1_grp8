@@ -39,3 +39,5 @@ C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\
 C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.genruntimeconfig.cache
 C:\Users\parab\Source\Repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\ref\WinFormsApp5.dll
 C:\Users\parab\source\repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.MotionSensorForm.resources
+C:\Users\parab\source\repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.LightModuleForm.resources
+C:\Users\parab\source\repos\project3_sec1_grp8\PROJECT 3\WinFormsApp5\obj\Debug\net8.0-windows8.0\WinFormsApp5.SmartLockForm.resources
