@@ -1,112 +1,158 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WinFormsApp5
 {
     public partial class Form1 : Form
     {
-        private SCADAinterface scadaInterface;       // Instance of SCADAInterface
-        private NotificationSystem notificationSystem; // Instance of NotificationSystem
+        private SCADAinterface scadaInterface;
+        private string notificationsLog = "";
+        private Dictionary<string, string> users;
 
-        public Form1()
+        // Update Form1 constructor to accept dependencies
+        public Form1(SCADAinterface scadaInterface, Dictionary<string, string> users)
         {
             InitializeComponent();
-            scadaInterface = new SCADAinterface();       // Initialize SCADAInterface
-            notificationSystem = new NotificationSystem(); // Initialize NotificationSystem
+            this.scadaInterface = scadaInterface;
+            this.users = users; // Pass users dictionary
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Initialize the interface (if needed)
             DisplayDeviceStatus();
+            MessageBox.Show("Welcome to the SCADA/HMI Interface!");
         }
 
-        // Method to display the status of each device on the form
         private void DisplayDeviceStatus()
         {
             var status = scadaInterface.GetDeviceStatus();
+
+            // Update all device statuses in txtStatus
             string statusText = string.Join(Environment.NewLine, status);
             txtStatus.Text = "Device Status:\n" + statusText;
+
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UpdateNotification(string message, bool isAlert = false)
         {
-            // Simulate a user command to control a device, such as turning on lights
-            string result = scadaInterface.ExecuteUserCommand("Turn on lights");
-            MessageBox.Show(result);  // Display result in a message box
-            DisplayDeviceStatus();    // Update the status display
+            string logEntry = (isAlert ? "[ALERT] " : "") + message;
+            notificationsLog += logEntry + Environment.NewLine;
+            txtStatus.Text = notificationsLog;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+
+        private Dictionary<string, string> LoadUsers()
         {
-            // Simulate a user command to control a device, such as turning on lights
-            string result = scadaInterface.ExecuteUserCommand("Turn on lights");
-            MessageBox.Show(result);  // Display result in a message box
-            DisplayDeviceStatus();    // Update the status display
+            var userDictionary = new Dictionary<string, string>();
+            string filePath = "users.txt";
+
+            if (File.Exists(filePath))
+            {
+                foreach (var line in File.ReadAllLines(filePath))
+                {
+                    var parts = line.Split(',');
+                    if (parts.Length == 2)
+                    {
+                        userDictionary[parts[0]] = parts[1];
+                    }
+                }
+            }
+            return userDictionary;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void SaveUsers()
         {
-            // Simulate a smart lock status change
-            scadaInterface.UpdateDeviceStatus(new Dictionary<string, string> { { "Smart Lock", "Locked" } });
-            DisplayDeviceStatus();
+            string filePath = "users.txt";
+            var lines = new List<string>();
+            foreach (var user in users)
+            {
+                lines.Add($"{user.Key},{user.Value}");
+            }
+            File.WriteAllLines(filePath, lines);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void AddUser(string username, string password)
         {
-            // Open the NotificationForm to display alert history
-            NotificationForm notificationForm = new NotificationForm();
-            notificationForm.ShowDialog();
+            if (!users.ContainsKey(username))
+            {
+                users[username] = password;
+                SaveUsers();
+                MessageBox.Show("User added successfully!", "Success");
+            }
+            else
+            {
+                MessageBox.Show("User already exists!", "Error");
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void DeleteUser(string username)
         {
-            // Simulate a camera status change
-            scadaInterface.UpdateDeviceStatus(new Dictionary<string, string> { { "Camera", "Active" } });
-            DisplayDeviceStatus();
+            if (users.ContainsKey(username))
+            {
+                users.Remove(username);
+                SaveUsers();
+                MessageBox.Show("User deleted successfully!", "Success");
+            }
+            else
+            {
+                MessageBox.Show("User does not exist!", "Error");
+            }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        /*private void buttonAddUser_Click(object sender, EventArgs e)
         {
-            // Simulate a motion sensor status change
-            scadaInterface.UpdateDeviceStatus(new Dictionary<string, string> { { "Motion Sensor", "No motion detected" } });
-            DisplayDeviceStatus();
-        }
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            {
+                AddUser(username, password);
+            }
+            else
+            {
+                MessageBox.Show("Username and password cannot be empty!", "Error");
+            }
+        }*/
+
+        /*  private void buttonDeleteUser_Click(object sender, EventArgs e)
+          {
+              string username = txtUsername.Text.Trim();
+              if (!string.IsNullOrEmpty(username))
+              {
+                  DeleteUser(username);
+              }
+              else
+              {
+                  MessageBox.Show("Username cannot be empty!", "Error");
+              }
+          }*/
+
+        
         private void button7_Click(object sender, EventArgs e)
         {
-            // Simulate a temperature change
-            scadaInterface.UpdateDeviceStatus(new Dictionary<string, string> { { "Temperature", new Random().Next(15, 30).ToString() + "°C" } });
+            // Logic for button7 click
+            scadaInterface.UpdateTemperature();
             DisplayDeviceStatus();
+            UpdateNotification("Temperature sensor updated.");
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // Simulate a user command to control a device, such as turning on lights
-            string result = scadaInterface.ExecuteUserCommand("Turn on lights");
-            MessageBox.Show(result);  // Display result in a message box
-            DisplayDeviceStatus();    // Update the status display
+            // Exit the application
+            UpdateNotification("Exiting application.");
+            Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtStatus_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

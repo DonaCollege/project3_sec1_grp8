@@ -8,20 +8,28 @@ namespace WinFormsApp5
     {
         private Dictionary<string, double> alertThresholds;
         private List<string> alertHistory;
+        private List<string> notifications;
+
 
         public NotificationSystem()
-        {
-            // Initialize thresholds and alert history
-            alertThresholds = new Dictionary<string, double>
-            {
-                { "Temperature", 30.0 },
-                { "Motion", 1.0 }
-            };
+        {   
+
+            alertThresholds = new Dictionary<string, double>();
             alertHistory = new List<string>();
-            LoadAlertThresholds();
+            LoadAlertThresholds(); // Load thresholds from file or defaults
+
         }
 
-        // Method to generate alerts based on sensor data
+
+       
+        public void AddNotification(string message, bool isAlert = false)
+        {
+            string notification = isAlert ? $"[ALERT]: {message}" : message;
+            notifications.Add(notification);
+
+            // For now, we simulate displaying the notification in the console.
+            Console.WriteLine(notification);
+        }
         public void GenerateAlert(string sensorType, double sensorValue)
         {
             if (alertThresholds.ContainsKey(sensorType) && sensorValue >= alertThresholds[sensorType])
@@ -32,27 +40,21 @@ namespace WinFormsApp5
             }
         }
 
-        // Sends the alert to the SCADA/HMI Interface for display
         private void SendAlertToHMI(string alertMessage)
         {
-            // Update the HMI with the alert (UI interaction will be handled in the form)
             Console.WriteLine("Alert sent to HMI: " + alertMessage);
-            // You can further implement an event or method to trigger HMI updates here.
         }
 
-        // Logs the alert history
         private void LogAlert(string alertMessage)
         {
             alertHistory.Add($"{DateTime.Now}: {alertMessage}");
         }
 
-        // Retrieves the alert history for display
         public List<string> GetAlertHistory()
         {
-            return alertHistory;
+            return new List<string>(alertHistory);
         }
 
-        // Receives sensor data and generates alerts if thresholds are exceeded
         public void ReceiveSensorData(Dictionary<string, double> sensorData)
         {
             foreach (var sensor in sensorData)
@@ -61,13 +63,11 @@ namespace WinFormsApp5
             }
         }
 
-        // Stores alert thresholds
         public void SetAlertThresholds(Dictionary<string, double> thresholds)
         {
             alertThresholds = thresholds;
         }
 
-        // Generates alert notifications
         public string GenerateAlertNotification(string sensorType, double sensorValue)
         {
             if (alertThresholds.ContainsKey(sensorType) && sensorValue >= alertThresholds[sensorType])
@@ -79,27 +79,30 @@ namespace WinFormsApp5
             return null;
         }
 
-        // Load alert thresholds from a file
         private void LoadAlertThresholds()
         {
-            // Simulate loading from a file
             alertThresholds["Temperature"] = 30.0;
             alertThresholds["Motion"] = 1.0;
         }
 
-        // Destructor to save alert history
         ~NotificationSystem()
         {
             SaveAlertHistory();
         }
 
-        private void SaveAlertHistory()
+        public void SaveAlertHistory()
         {
-            // Simulate saving to a file
-            Console.WriteLine("Alert history saved.");
-
+            try
+            {
+                string filePath = "AlertHistory.txt";
+                File.WriteAllLines(filePath, alertHistory);
+                Console.WriteLine("Alert history saved to file.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error saving alert history: " + ex.Message);
+            }
         }
-
-       
     }
+
 }

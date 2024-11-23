@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R1Xi+P3mvgKhRRMf2stsdhcifmExot7mpmWDoGrjb/LifYPV1SSqVjldZN9taIO1grksiZktr8n8BcfMACfzEA==",
+  "dgSpecHash": "RZ4fpXw708B2SCMYuT+/C0eV/gGGuN8rTTjJtDViSbFNmvff/SKKPqEBSxmDAW88ua4vPQfaIf7jD3VvjlN6Fw==",
   "success": true,
   "projectFilePath": "C:\\Users\\barot\\source\\repos\\SEM 3\\Project 3 - sdlc\\PROJECT 3\\PROJECT 3\\WinFormsApp5\\WinFormsApp5.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\barot\\.nuget\\packages\\mstest.testframework\\3.6.3\\mstest.testframework.3.6.3.nupkg.sha512"
+  ],
   "logs": []
 }
