@@ -20,7 +20,7 @@ namespace SCADANotificationTests
         public void SCADA_TC1_AuthenticateUser_ValidCredentials_ReturnsTrue()
         {
             // Valid credentials should return true
-            var result = scadaInterface.AuthenticateUser("admin", "password");
+            var result = scadaInterface.AuthenticateUser("admin", "password123");
             Assert.IsTrue(result);
         }
 

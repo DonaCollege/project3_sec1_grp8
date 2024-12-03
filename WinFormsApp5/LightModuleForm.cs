@@ -156,20 +156,12 @@ namespace WinFormsApp5
 
         private void offButton_Click(object sender, EventArgs e)
         {
-            _lightController.TurnOff();
+           _lightController.TurnOff();
             EnableControls(false);
             UpdateStatusLabel("Light is OFF | Power Saving: OFF");
 
             NotificationManager.AddNotification("Light turned OFF.");
         }
-
-        private Form1 mainForm;
-
-public LightModuleForm(Form1 form)
-{
-    InitializeComponent();
-    mainForm = form; // Store the reference to the main form
-}
 
 
     }

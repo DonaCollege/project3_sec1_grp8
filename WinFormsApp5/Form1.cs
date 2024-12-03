@@ -20,28 +20,28 @@ namespace WinFormsApp5
             this.users = users; // Pass users dictionary
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            DisplayDeviceStatus();
-            MessageBox.Show("Welcome to the SCADA/HMI Interface!");
-        }
+        /*  private void Form1_Load(object sender, EventArgs e)
+          {
+              //DisplayDeviceStatus();
+              MessageBox.Show("Welcome to the SCADA/HMI Interface!");
+          }
+  */
+        /* private void DisplayDeviceStatus()
+         {
+             var status = scadaInterface.GetDeviceStatus();
 
-        private void DisplayDeviceStatus()
-        {
-            var status = scadaInterface.GetDeviceStatus();
-
-            // Update all device statuses in txtStatus
-            string statusText = string.Join(Environment.NewLine, status);
-            txtStatus.Text = "Device Status:\n" + statusText;
+             // Update all device statuses in txtStatus
+             string statusText = string.Join(Environment.NewLine, status);
+             //txtStatus.Text = "Device Status:\n" + statusText;
 
 
-        }
-
+         }
+ */
         private void UpdateNotification(string message, bool isAlert = false)
         {
             string logEntry = (isAlert ? "[ALERT] " : "") + message;
             notificationsLog += logEntry + Environment.NewLine;
-            txtStatus.Text = notificationsLog;
+            // txtStatus.Text = notificationsLog;
         }
 
 
@@ -196,7 +196,7 @@ namespace WinFormsApp5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LightModuleForm lightModuleForm = new LightModuleForm(this); // Pass Form1 instance
+            LightModuleForm lightModuleForm = new LightModuleForm(); // Pass Form1 instance
             lightModuleForm.Show();
         }
 
@@ -232,17 +232,22 @@ namespace WinFormsApp5
             notificationForm.Show();
         }
 
-        public void UpdateDeviceStatus()
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Fetch the current status of devices from SCADAinterface
-            var status = scadaInterface.GetDeviceStatus();
 
-            // Format the status into a readable string
-            string statusText = string.Join(Environment.NewLine, status.Select(kv => $"{kv.Key}: {kv.Value}"));
-
-            // Display the status in the SCADA interface box (txtStatus)
-            txtStatus.Text = statusText;
         }
+
+        /* public void UpdateDeviceStatus()
+         {
+             // Fetch the current status of devices from SCADAinterface
+             var status = scadaInterface.GetDeviceStatus();
+
+             // Format the status into a readable string
+             string statusText = string.Join(Environment.NewLine, status.Select(kv => $"{kv.Key}: {kv.Value}"));
+
+             // Display the status in the SCADA interface box (txtStatus)
+             txtStatus.Text = statusText;
+         }*/
 
 
     }

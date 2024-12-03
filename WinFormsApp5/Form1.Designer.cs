@@ -18,33 +18,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
-            txtStatus = new TextBox();
             button8 = new Button();
             textBox2 = new TextBox();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.BackgroundImage = Properties.Resources.LIT;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1407, 429);
-            button1.Name = "button1";
-            button1.Size = new Size(217, 143);
-            button1.TabIndex = 0;
-            button1.Text = "LIGHTS";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
+            button2.AutoSize = true;
             button2.BackColor = SystemColors.ButtonHighlight;
             button2.BackgroundImage = Properties.Resources.LIT;
             button2.BackgroundImageLayout = ImageLayout.Stretch;
@@ -62,6 +48,7 @@
             // 
             // button3
             // 
+            button3.AutoSize = true;
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -77,6 +64,7 @@
             // 
             // button4
             // 
+            button4.AutoSize = true;
             button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -92,6 +80,7 @@
             // 
             // button5
             // 
+            button5.AutoSize = true;
             button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
             button5.BackgroundImageLayout = ImageLayout.Stretch;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -107,6 +96,7 @@
             // 
             // button6
             // 
+            button6.AutoSize = true;
             button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
             button6.BackgroundImageLayout = ImageLayout.Stretch;
             button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -122,6 +112,7 @@
             // 
             // button7
             // 
+            button7.AutoSize = true;
             button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
             button7.BackgroundImageLayout = ImageLayout.Stretch;
             button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -135,29 +126,9 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
-            // txtStatus
-            // 
-            txtStatus.BackColor = SystemColors.GradientActiveCaption;
-            txtStatus.Location = new Point(200, 398);
-            txtStatus.Multiline = true;
-            txtStatus.Name = "txtStatus";
-            txtStatus.ReadOnly = true;
-            txtStatus.Size = new Size(807, 131);
-            txtStatus.TabIndex = 6;
-            txtStatus.TextChanged += txtStatus_TextChanged;
-            // 
             // button8
             // 
-            this.button8 = new System.Windows.Forms.Button();
-            this.button8.Location = new System.Drawing.Point(100, 300); // Adjust position as needed
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 30);
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            this.Controls.Add(this.button8);
-
-
+            button8.AutoSize = true;
             button8.BackColor = Color.Transparent;
             button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
             button8.BackgroundImageLayout = ImageLayout.Stretch;
@@ -176,48 +147,47 @@
             // textBox2
             // 
             textBox2.BackColor = Color.LightSteelBlue;
+            textBox2.Dock = DockStyle.Right;
             textBox2.Font = new Font("Berlin Sans FB", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(430, 10);
+            textBox2.Location = new Point(-93, 0);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(347, 32);
+            textBox2.Size = new Size(1255, 32);
             textBox2.TabIndex = 17;
             textBox2.Text = "SMART HOME MONITIRING SYSTEM";
+            textBox2.TextAlign = HorizontalAlignment.Center;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1252, 541);
+            ClientSize = new Size(1162, 478);
             Controls.Add(textBox2);
             Controls.Add(button8);
-            Controls.Add(txtStatus);
             Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(button6);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
         private Button button5;
         private Button button6;
         private Button button7;
-        private TextBox txtStatus;
         private Button button8;
         private TextBox textBox2;
     }
